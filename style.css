@@ -7,16 +7,22 @@ body{
   font-family: Arial, sans-serif;
 }
 .search-container{
-  margin: 70px auto;
+  margin: 90px auto;
   width: 530px;
   background-color: transparent;
+}
+.form-wrapper{
+  background-color: #1C4DF0; /* Fallback color */
+  padding: 2px;
+  border-radius: 9px;
+  background: linear-gradient(to right, #7861c3 0%, #5270dd 40%, #187def 70%, #5264c8 100%);
 }
 .search-container form{
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #050B0B;
-  border: 2px solid #8668da;
+  /* border: 2px solid #3542EE; */
   border-radius: 8px;
   padding: 4px;
 }
@@ -26,7 +32,6 @@ body{
 }
 .search-container form button[type=button]{
   background-color: transparent;
-  color: #d7d7d7;
   border: none;
   padding: 0 15px;
 }
@@ -45,7 +50,7 @@ input[type="search"]::-webkit-search-cancel-button {
   display: none;
 }
 .search-container form button[type=submit]{
-  background-color: #8668da;
+  background-color: #1C4DF0;
   color: white;
   padding: 11px 30px;
   border: none;
@@ -58,18 +63,15 @@ input[type="search"]::-webkit-search-cancel-button {
   margin-top: 10px;
   background-color: #111216;
   border-radius: 10px;
-  border: 2px solid #8668da;
+  border: 2px solid #434351;
   box-shadow: rgba(125, 125, 181, 0.2) 0px 7px 29px 0px;
   display: none;
+  padding: 17px 14px;
 }
 .searchMenuOpen{
   display: block;
 }
-.search-main ul{
-  padding: 15px 10px;
-  list-style: none;
-}
-.search-main ul li{
+.search-main a{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -77,23 +79,39 @@ input[type="search"]::-webkit-search-cancel-button {
   padding: 6px 15px;
   margin: 2px;
   border-radius: 4px;
-  color: #dedede;
+  color: #b5b5b5;
   cursor: pointer;
+  text-decoration: none;
 }
-.search-main ul li:hover{
-  background-color: #f6f3ff40;
-}
-.search-main ul li svg{
-  color: #ac8dff;
+.search-main a:hover{
+  background-color: #948e9c25;
 }
 
 @media (max-width: 600px){
-  body{
-    background-color: #ac8dff;
-  }
   .search-container{
     margin: 70px auto;
     width: 95%;
     background-color: transparent;
   }
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+}
+div#hero-search {
+  position: absolute;
+  width: 50%;
+  top: 48%;
+  left: 26%;
+}
+
+.gsc-control-cse {
+  background-color: #020303 !important;
+  border: 3px solid rgba(53, 66, 238, 1) !important;
+  border-radius: 10px !important;
+}
+.gsc-results-wrapper-nooverlay {
+  display: none;
 }
